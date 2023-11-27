@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "OfiSystem",
+    "slug": "ofisystem",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/ofisystem_logo_icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/spha.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#1D1238"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1D1238"
+      },
+      "package": "com.joaosour.ofisystem"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
+  }
+}

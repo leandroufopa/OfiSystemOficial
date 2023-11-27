@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159448372691",
+    "project_id": "ofisystem-c7c94",
+    "storage_bucket": "ofisystem-c7c94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159448372691:android:2cb6defbf9cc30e3854b26",
+        "android_client_info": {
+          "package_name": "com.ofisystememp.ofisystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaU2BfPR8TVPMkqATph5DjKI3zzMlMXog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
