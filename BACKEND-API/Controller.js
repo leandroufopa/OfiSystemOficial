@@ -48,15 +48,11 @@ app.post('/atualizacaoSenha', async (req, res) => {
       where: { id: req.body.id },
     });
 
-    console.log('Usuário Encontrado:', usuarioEncontrado);
-
     if (usuarioEncontrado) {
       const senhaCorrespondente = await bcrypt.compare(
         req.body.senhaAntiga,
         usuarioEncontrado.senhaUsuario
       );
-
-      console.log('Senha Correspondente:', senhaCorrespondente);
 
       if (senhaCorrespondente) {
         if (req.body.novaSenha === req.body.confNovaSenha) {
@@ -69,7 +65,7 @@ app.post('/atualizacaoSenha', async (req, res) => {
           res.status(400).send(JSON.stringify('Senha e Confirmação não conferem!'));
         }
       } else {
-        res.status(401).send(JSON.stringify('Senha antiga não confere!'));
+        res.status(404).send(JSON.stringify('Senha anterior nao encontrada!'));
       }
     } else {
       res.status(404).send(JSON.stringify('Usuário não encontrado!'));
@@ -99,7 +95,7 @@ app.post('/cadastroUsuario', async (req, res) => {
       );
   
       if (!senhaAdminCorreta) {
-        return res.status(401).send(JSON.stringify('Senha do administrador não confere'));
+        return res.status(404).send(JSON.stringify('Senha do administrador não encontrada'));
       }
       
       const senhaHash = await bcrypt.hash(req.body.senhaNovoUsuario, 10);
@@ -114,7 +110,7 @@ app.post('/cadastroUsuario', async (req, res) => {
       });
      
     } else {
-      return res.status(404).send(JSON.stringify('Usuario já cadastrado!'));
+      return res.status(409).send(JSON.stringify('Usuario já cadastrado!'));
     }
     
      return res.status(201).send(JSON.stringify('Usuario cadastrado!'));
@@ -139,7 +135,7 @@ app.post('/cadastroProduto', async (req, res)=> {
         });
         return res.status(201).send(JSON.stringify('Cadastro efetuado com sucesso!'));
     } else {
-      return res.status(404).send(JSON.stringify('Produto presente na base de dados!'));
+      return res.status(409).send(JSON.stringify('Produto presente na base de dados!'));
     }
 });
 
@@ -167,7 +163,7 @@ app.get('/listagemProdutos', async (req, res) => {
       });
       
       if (existingProdutoEditar === null) {
-        return res.status(401).send(JSON.stringify('Modelo Não Confere com o Listado Acima'));
+        return res.status(405).send(JSON.stringify('Modelo Não Confere com o Listado Acima'));
       } else {
 
         if (req.body.novoModelo != null){
@@ -188,7 +184,7 @@ app.get('/listagemProdutos', async (req, res) => {
         existingProdutoEditar.imagemProduto=existingProdutoEditar.imagemProduto;
       }
           existingProdutoEditar.save();
-          return res.status(200).send(JSON.stringify('Modelo Editado Com Sucesso!'));
+          return res.status(201).send(JSON.stringify('Modelo Editado Com Sucesso!'));
 
       }
     } catch (error) {
@@ -205,7 +201,7 @@ app.get('/listagemProdutos', async (req, res) => {
       });
       
       if (existingProdutoExcluir === null) {
-        return res.status(401).send(JSON.stringify('Modelo Não Confere com o Listado Acima'));
+        return res.status(405).send(JSON.stringify('Modelo Não Confere com o Listado Acima'));
       } else {
         existingProdutoExcluir.destroy();
         return res.status(200).send(JSON.stringify('Modelo Excluído Com Sucesso!'));
