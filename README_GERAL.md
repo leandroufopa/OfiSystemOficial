@@ -1,9 +1,7 @@
 # OfiSystem
 
-<<<<<<< HEAD
 ## Seja bem-vindo ao repositório Git do aplicativo mobile OfiSystem, desenvolvido pelo discente Leandro de Oliveira, do curso de Bacharelado em Sistemas de Informação da Universidade Federal do Oeste do Pará (UFOPA), em parceria com o também discente João Victor Nascimento.
 ## O aplicativo OfiSystem foi esenvolvido para atender as demandas da Oficina Roda Mais, situada em Santarém, estado do Pará. Todavia, ele pode ser adaptado para ser utilizado em outras empresas do ramo. 
-=======
 ## Uma breve descrição:
 
 ### Seja bem-vindo ao repositório Git do aplicativo mobile OfiSystem, desenvolvido pelo discente Leandro de Oliveira, do curso de Bacharelado em Sistemas de Informação da Universidade Federal do Oeste do Pará (UFOPA), em parceria com o também discente João Victor Nascimento.
@@ -25,19 +23,20 @@
 ## Passos para execução do projeto:
 ### 1. Baixando os arquivos necessários
 - Projeto do GitHub [aqui](https://github.com/leandroufopa/OfiSystemOficial). Após baixar, importe o projeto no Visual Studio Code;
-- Banco de Dados MySql [aqui](https://github.com/leandroufopa/Ofisystem-/blob/main/DOCUMENTOS/BaseOfisystem.sql). Após baixar o banco de dados, deve-se importá-lo no PhpMyAdmin;
+- Banco de Dados MySql [aqui](https://github.com/leandroufopa/OfiSystemOficial/blob/main/DOCUMENTOS/BaseOfisystem.sql). Após baixar o banco de dados, deve-se importá-lo no PhpMyAdmin;
 
 ### 2. Executando BackEnd
 - Abra o diretório BackEnd-Api e esexute o comando a seguir para instalar todas as dependências:
 ```
   npm i
 ```
-- Abra o diretório FrontEnd e execute o mesmo comando acima, também para instalar as dependências (na próxima atualização, todos os componentes de BackEnd-Api estarão no seu respectivo diretório).
+- Abra o diretório FrontEnd e execute o mesmo comando acima, também para instalar as dependências.
 - Agora instale o componente Nodemon, conforme o comando abaixo:
 ```
 npm install -g nodemon
 ```
-- Ajuste as credenciais de "development" do arquivo [config.js](https://github.com/leandroufopa/Ofisystem-/blob/main/FRONTEND/config/config.json) de acordo com as credenciais do banco de dados MySql importados no PHPMyAdmin.
+- Ajuste as credenciais de "development" do arquivo [config.js](https://github.com/leandroufopa/Ofisystem-/blob/main/FRONTEND/config.json) de acordo com as credenciais do banco de dados MySql importados no PHPMyAdmin.
+#### Nota: O arquivo config.json não ficou na pasta BackEnd-Api pois o VS Cod não permite voltar mais que 3 diretorios.
 - Execute o comando abaixo para executar o BackEnd da aplicação:
 ```
 modemon Controller.js
@@ -57,7 +56,6 @@ npm install -g expo
 ```
 expo start
 ```
-- Para finalizar, copie o Ip do expo e cole na variável global "urlRoot" do arquivo [config.js](https://github.com/leandroufopa/Ofisystem-/blob/main/FRONTEND/config/config.json).
+- Para finalizar, copie o Ip do expo e cole na variável global "urlRoot" do arquivo [config.js](https://github.com/leandroufopa/Ofisystem-/blob/main/FRONTEND/config.json).
 
 ## Parabéns, se você chegou até aqui é porque conseguiu executar nosso projeto.
->>>>>>> 1fdcd3d83fb352f53be961af335992f0ac35c99b

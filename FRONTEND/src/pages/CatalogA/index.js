@@ -4,7 +4,7 @@ import { View, Text, Image, TouchableOpacity, TextInput, ScrollView } from 'reac
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import config from '../../../config/config.json';
+import config from '../../../config.json';
 import Loading from '../Carregamento/Loading.js';
 
 export default function CatalogA() {

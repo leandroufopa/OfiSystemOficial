@@ -4,7 +4,7 @@ import { Modal, View, Text, Image, TouchableOpacity, TextInput, KeyboardAvoiding
 import * as Animatable from 'react-native-animatable'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import config from '../../../config/config.json';
+import config from '../../../config.json';
 import Loading from '../Carregamento/Loading.js';
 
 //import { minhaConstante } from '../Catalog/index.js'

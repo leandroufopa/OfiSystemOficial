@@ -2,7 +2,7 @@ const express=require('express');
 const cors=require('cors');
 const bodyParser=require('body-parser');
 const bcrypt = require('bcrypt');
-const models=require('../FRONTEND/models');
+const models=require('../BACKEND-API/models');
 
 
 const app=express();
@@ -184,7 +184,7 @@ app.get('/listagemProdutos', async (req, res) => {
         existingProdutoEditar.imagemProduto=existingProdutoEditar.imagemProduto;
       }
           existingProdutoEditar.save();
-          return res.status(201).send(JSON.stringify('Modelo Editado Com Sucesso!'));
+          return res.status(200).send(JSON.stringify('Modelo Editado Com Sucesso!'));
 
       }
     } catch (error) {
@@ -193,7 +193,7 @@ app.get('/listagemProdutos', async (req, res) => {
     }
   });
 
-
+  // Excluir modelo
   app.delete('/exclusaoProduto', async (req, res) => {
     try {
       let existingProdutoExcluir = await produto.findOne({

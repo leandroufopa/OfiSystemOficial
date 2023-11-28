@@ -7,11 +7,8 @@ import { ScrollView } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // import database from '../../config/firebaseconfig'
 import * as LocalAuthentication from 'expo-local-authentication';
-import config from '../../../config/config.json';
+import config from '../../../config.json';
 import Loading from '../Carregamento/Loading.js';
-
-
-
 
 export default function Login() {
 
