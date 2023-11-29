@@ -26,7 +26,7 @@
 - Banco de Dados MySql [aqui](https://github.com/leandroufopa/OfiSystemOficial/blob/main/DOCUMENTOS/BaseOfisystem.sql). Após baixar o banco de dados, deve-se importá-lo no PhpMyAdmin;
 
 ### 2. Executando BackEnd
-- Abra o diretório BackEnd-Api e esexute o comando a seguir para instalar todas as dependências:
+- Abra o diretório BackEnd-Api e execute o comando a seguir para instalar todas as dependências:
 ```
   npm i
 ```
