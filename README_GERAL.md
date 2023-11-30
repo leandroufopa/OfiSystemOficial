@@ -1,7 +1,4 @@
 # OfiSystem
-
-## Seja bem-vindo ao repositório Git do aplicativo mobile OfiSystem, desenvolvido pelo discente Leandro de Oliveira, do curso de Bacharelado em Sistemas de Informação da Universidade Federal do Oeste do Pará (UFOPA), em parceria com o também discente João Victor Nascimento.
-## O aplicativo OfiSystem foi esenvolvido para atender as demandas da Oficina Roda Mais, situada em Santarém, estado do Pará. Todavia, ele pode ser adaptado para ser utilizado em outras empresas do ramo. 
 ## Uma breve descrição:
 
 ### Seja bem-vindo ao repositório Git do aplicativo mobile OfiSystem, desenvolvido pelo discente Leandro de Oliveira, do curso de Bacharelado em Sistemas de Informação da Universidade Federal do Oeste do Pará (UFOPA), em parceria com o também discente João Victor Nascimento.
@@ -30,8 +27,19 @@
 ```
   npm i
 ```
-- Abra o diretório FrontEnd e execute o mesmo comando acima, também para instalar as dependências.
-- Agora instale o componente Nodemon, conforme o comando abaixo:
+- Instale o framework Express, conforme comando abaixo:
+```
+npm install express --save 
+```
+- Instale o módulo Cors, que controla as requisições ao BD, conforme o comando abaixo:
+```
+npm install cors --save
+```
+- Instale o módulo Sequelize, conforme o comando abaixo:
+```
+npm install sequelize --save 
+```
+- Instale o componente Nodemon, conforme o comando abaixo:
 ```
 npm install -g nodemon
 ```
